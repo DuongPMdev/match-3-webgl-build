@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-match-three-1.0";
+const cacheName = "NGen-match-three-1.0";
 const contentToCache = [
     "Build/Build.loader.js?v=1.0",
     "Build/Build.framework.js?v=1.0",

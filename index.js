@@ -1,5 +1,5 @@
 var fullSize = false;
-const cacheName = "DefaultCompany-match-three-1.0";
+const cacheName = "NGen-match-three-1.0";
   var unityInstanceRef;
   var unsubscribe;
   var container = document.querySelector("#unity-container");
@@ -88,7 +88,7 @@ const cacheName = "DefaultCompany-match-three-1.0";
     frameworkUrl: buildUrl + "/Build.framework.js?v=1.0",
     codeUrl: buildUrl + "/Build.wasm?v=1.0",
     streamingAssetsUrl: "StreamingAssets",
-    companyName: "DefaultCompany",
+    companyName: "NGen",
     productName: "match-three",
     productVersion: "1.0",
     showBanner: unityShowBanner,
@@ -394,7 +394,7 @@ var unityReady = false;
 
 async function checkAndClearCache(fileUrl) {
   let fileFound = false;
-  const specificName = "DefaultCompany-match-three"; // Replace with the name or substring to search
+  const specificName = "NGen-match-three"; // Replace with the name or substring to search
   
   const cacheNames = await caches.keys();
       await Promise.all(
