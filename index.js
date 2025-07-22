@@ -84,9 +84,9 @@ const cacheName = "NGen-match-three-1.0";
   var buildUrl = "Build";
   var loaderUrl = buildUrl + "/Build6.loader.js?v=1.0";
   var config = {
-    dataUrl: buildUrl + "/Build6.data?v=1.0",
-    frameworkUrl: buildUrl + "/Build6.framework.js?v=1.0",
-    codeUrl: buildUrl + "/Build6.wasm?v=1.0",
+    dataUrl: buildUrl + "/Build6.data.unityweb?v=1.0",
+    frameworkUrl: buildUrl + "/Build6.framework.js.unityweb?v=1.0",
+    codeUrl: buildUrl + "/Build6.wasm.unityweb?v=1.0",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "NGen",
     productName: "match-three",
