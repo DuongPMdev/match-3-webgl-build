@@ -1,23 +1,96 @@
-body { padding: 0; margin: 0 }
-#unity-container { position: fixed; width: 100%; height: 100%; background: url('bg_full.png');background-size: cover; background-position: center;background-repeat: no-repeat;}
-#unity-canvas { position: fixed; width: 100%; height: 100%; background: url('bg.jpg'); background-size: cover; background-position: center;}
-#unity-loading-bar { position: absolute; left: 50%; top: 70%; transform: translate(-50%, -50%); display: none }
-#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
-#unity-progress-bar-empty { margin-left: auto; margin-right: auto; width: 141px; height: 18px; margin-top: 100px; border-radius: 1.5em; background: url('progress-bar-empty-dark.png') no-repeat center }
-#unity-progress-bar-full { width: 0%; height: 17px; margin-top: 10px;border-radius: 1em; background: url('progress-bar-full-dark.png') no-repeat center }
-#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
-
-* {
+/* Reset và chuẩn hóa */
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
-
-
-.progress-container {
-  box-shadow: 0 4px 5px rgb(0, 0, 0, 0.1)
+* {
+  box-sizing: inherit;
 }
 
-.progress-container, .progress {
+/* Container chứa toàn bộ WebGL */
+#unity-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('bg_full.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Canvas chính của Unity */
+#unity-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Loading bar */
+#unity-loading-bar {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* Logo */
+#unity-logo {
+  width: 154px;
+  height: 130px;
+  background: url('unity-logo-dark.png') no-repeat center;
+}
+
+/* Progress bar rỗng */
+#unity-progress-bar-empty {
+  margin-left: auto;
+  margin-right: auto;
+  width: 141px;
+  height: 18px;
+  margin-top: 100px;
+  border-radius: 1.5em;
+  background: url('progress-bar-empty-dark.png') no-repeat center;
+}
+
+/* Progress bar đầy */
+#unity-progress-bar-full {
+  width: 0%;
+  height: 17px;
+  margin-top: 10px;
+  border-radius: 1em;
+  background: url('progress-bar-full-dark.png') no-repeat center;
+}
+
+/* Thông báo cảnh báo */
+#unity-warning {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px;
+  display: none;
+}
+
+/* Container của thanh tiến trình mới */
+.progress-container {
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
   background-color: #eee;
   border-radius: 15px;
   position: relative;
@@ -25,16 +98,20 @@ body { padding: 0; margin: 0 }
   width: 200px;
 }
 
+/* Thanh tiến trình bên trong */
 .progress {
   background-color: #6F39B0;
   width: 0;
+  height: 100%;
+  border-radius: 15px;
   transition: width 0.4s linear;
 }
 
+/* Số phần trăm hiển thị */
 .percentage {
   background-color: #6F39B0;
   border-radius: 5px;
-  box-shadow: 0 4px 5px rgb(0, 0, 0, 0.2);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   color: #fff;
   font-size: 12px;
   padding: 4px;
@@ -47,6 +124,7 @@ body { padding: 0; margin: 0 }
   transition: left 0.4s linear;
 }
 
+/* Mũi tên chỉ phía dưới % */
 .percentage::after {
   background-color: #6F39B0;
   content: '';
