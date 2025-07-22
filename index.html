@@ -12,6 +12,27 @@
 	<!-- <script src="https://unpkg.com/@cuonghx.ngen/cat-battle-ton-sdk@1.1.6"></script> -->
 	<!-- <script src="https://unpkg.com/@cuonghx.ngen/cat-battle-evm-sdk@1.0.0"></script> -->
 	<script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		#unity-container {
+			width: 100vw;
+			height: 100vh;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+		canvas {
+			width: 100% !important;
+			height: 100% !important;
+		}
+	</style>
   </head>
   <body>
     <div id="unity-container">
@@ -56,6 +77,18 @@
 	  gtag('js', new Date());
 
 	  gtag('config', 'G-PCVJ0R9PRF');
+	</script>
+	<script>
+		window.addEventListener('resize', function() {
+			var canvas = document.querySelector("canvas");
+			if (canvas) {
+				canvas.style.width = window.innerWidth + "px";
+				canvas.style.height = window.innerHeight + "px";
+			}
+		});
+
+		// Gọi resize ngay lập tức
+		window.dispatchEvent(new Event('resize'));
 	</script>
   </body>
 </html>

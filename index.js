@@ -43,7 +43,7 @@ const cacheName = "NGen-match-three-1.0";
   function startLoadingLoop() {
     loadingInterval = setInterval(() => {
       dotCount = (dotCount % 3) + 1;  // Cycle between 1, 2, and 3 dots
-      document.getElementById('dots').innerHTML = '.'.repeat(dotCount);
+      //document.getElementById('dots').innerHTML = '.'.repeat(dotCount);
       
       // Simulate increasing progress (remove this in the actual project)
       fakeProgress += 2;
@@ -58,7 +58,7 @@ const cacheName = "NGen-match-three-1.0";
           fakeProgress = 80;
           if(!inPreparingState)
           {
-            document.getElementById('loadingText').innerHTML = 'Preparing data<span id="dots">.</span>';
+            //document.getElementById('loadingText').innerHTML = '<span id="dots">.</span>';
           }
           
           inPreparingState = true;
@@ -82,11 +82,11 @@ const cacheName = "NGen-match-three-1.0";
   // }, 5000); 
 
   var buildUrl = "Build";
-  var loaderUrl = buildUrl + "/Build.loader.js?v=1.0";
+  var loaderUrl = buildUrl + "/Build6.loader.js?v=1.0";
   var config = {
-    dataUrl: buildUrl + "/Build.data?v=1.0",
-    frameworkUrl: buildUrl + "/Build.framework.js?v=1.0",
-    codeUrl: buildUrl + "/Build.wasm?v=1.0",
+    dataUrl: buildUrl + "/Build6.data?v=1.0",
+    frameworkUrl: buildUrl + "/Build6.framework.js?v=1.0",
+    codeUrl: buildUrl + "/Build6.wasm?v=1.0",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "NGen",
     productName: "match-three",
@@ -170,7 +170,7 @@ createUnityInstance(canvas, config, (progressUnity) => {
   if(progress >= 80 && isChangeText == false)
   {
     isChangeText = true;
-    document.getElementById('loadingText').innerHTML = 'Loading data<span id="dots">.</span>';
+    //document.getElementById('loadingText').innerHTML = 'Loading data<span id="dots">.</span>';
   }
   //Module.setStatus("Loading... " + Math.round(progress * 100) + "%");
 }).then((unityInstance) => {
