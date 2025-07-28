@@ -1,9 +1,9 @@
-const cacheName = "NGen-match-three-1.1.9";
+const cacheName = "NGen-match-three-1.3.1";
 const contentToCache = [
-    "Build/Build6.loader.js?v=1.1.9",
-    "Build/Build6.framework.js.unityweb?v=1.1.9",
-    "Build/Build6.data.unityweb?v=1.1.9",
-    "Build/Build6.wasm.unityweb?v=1.1.9",
+    "Build/Build6.loader.js?v=1.3.1",
+    "Build/Build6.framework.js.unityweb?v=1.3.1",
+    "Build/Build6.data.unityweb?v=1.3.1",
+    "Build/Build6.wasm.unityweb?v=1.3.1",
     "TemplateData/style.css",
     "load-sdk.js",
 ];
