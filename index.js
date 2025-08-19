@@ -1,5 +1,5 @@
 var fullSize = false;
-const cacheName = "NGen-match-three-1.3.1";
+const cacheName = "NGen-match-three-1.4.6";
   var unityInstanceRef;
   var unsubscribe;
   var container = document.querySelector("#unity-container");
@@ -82,15 +82,15 @@ const cacheName = "NGen-match-three-1.3.1";
   // }, 5000); 
 
   var buildUrl = "Build";
-  var loaderUrl = buildUrl + "/Build6.loader.js?v=1.3.1";
+  var loaderUrl = buildUrl + "/Build.loader.js?v=1.4.6";
   var config = {
-    dataUrl: buildUrl + "/Build6.data.unityweb?v=1.3.1",
-    frameworkUrl: buildUrl + "/Build6.framework.js.unityweb?v=1.3.1",
-    codeUrl: buildUrl + "/Build6.wasm.unityweb?v=1.3.1",
+    dataUrl: buildUrl + "/Build.data.unityweb?v=1.4.6",
+    frameworkUrl: buildUrl + "/Build.framework.js.unityweb?v=1.4.6",
+    codeUrl: buildUrl + "/Build.wasm.unityweb?v=1.4.6",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "NGen",
     productName: "match-three",
-    productVersion: "1.3.1",
+    productVersion: "1.4.6",
     showBanner: unityShowBanner,
 	  cacheControl: function (url) {
   //return "immutable";
